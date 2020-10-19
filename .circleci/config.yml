@@ -1,0 +1,39 @@
+version: 2
+jobs:
+   build:
+     docker:
+       - image: circleci/node:10.1.0
+     steps:
+       - checkout
+       - run: npm install
+        
+   test:
+     docker:
+        - image: circleci/node:10.1.0
+          environment:
+            NODE_ENV: dev
+            MONGODB_URL: 'mongodb://localhost:27017/dev'
+        
+        - image: mongo:3.4.0
+     steps:
+        - checkout
+        - run: npm install
+        - run: npm run lint
+        # - run: npm run depcheck
+        - run:
+            name: Wait for Mongo to start
+            command: dockerize -wait tcp://localhost:27017 -timeout 1m
+        - run: 
+            name: Run Test
+            environment:
+              NODE_ENV: dev
+              MONGODB_URL: 'mongodb://localhost:27017/dev'
+            command: npm run test
+        
+        
+workflows:
+  version: 2
+  build-test-and-lint:
+    jobs:
+      - build
+      - test

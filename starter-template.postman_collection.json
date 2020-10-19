@@ -1,0 +1,304 @@
+{
+	"info": {
+		"_postman_id": "0aa1f6d0-ad57-4a1e-ae95-c496ff438469",
+		"name": "Book",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "book list",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNhMUBlbWFpbC5jb20iLCJpYXQiOjE2MDMwMTY3NjQsImV4cCI6MTYwMzAyMDM2NH0.wMqvD6VqGdJ2pHinES_34E5Djl0rTttmCPM6-P0N3FA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:5050/api/v1/book",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5050",
+					"path": [
+						"api",
+						"v1",
+						"book"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create book",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNhMkBlbWFpbC5jb20iLCJpYXQiOjE2MDMwMzU2MzYsImV4cCI6MTYwMzAzOTIzNn0.JvYJThOVpxQEw4BRKbf2ZQPDO8EqO2E-mOg22gOLx4Y",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"title\": \"any\",\n\t\"description\": \"new\",\n\t\"type\": \"public\",\n\t\"cover\": \"dfdasfasfsa\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5050/api/v1/book",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5050",
+					"path": [
+						"api",
+						"v1",
+						"book"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get book by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:5050/api/v1/book/5f8adf8738c2850138997755",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5050",
+					"path": [
+						"api",
+						"v1",
+						"book",
+						"5f8adf8738c2850138997755"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete book",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNhMkBlbWFpbC5jb20iLCJpYXQiOjE2MDMwMzU2MzYsImV4cCI6MTYwMzAzOTIzNn0.JvYJThOVpxQEw4BRKbf2ZQPDO8EqO2E-mOg22gOLx4Y",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:5050/api/v1/book/5f8c636dbd8c9e002769bfa5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5050",
+					"path": [
+						"api",
+						"v1",
+						"book",
+						"5f8c636dbd8c9e002769bfa5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update book",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNhMkBlbWFpbC5jb20iLCJpYXQiOjE2MDMwMzU2MzYsImV4cCI6MTYwMzAzOTIzNn0.JvYJThOVpxQEw4BRKbf2ZQPDO8EqO2E-mOg22gOLx4Y",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"title\": \"salem new update\",\n\t\"description\": \"new\",\n\t\"type\": \"public\",\n\t\"cover\": \"dfdasfasfsa\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5050/api/v1/book/5f8c65412cca6e00cfa88431",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5050",
+					"path": [
+						"api",
+						"v1",
+						"book",
+						"5f8c65412cca6e00cfa88431"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"firstName\": \"salem\",\n\t\"lastName\": \"salem\",\n\t\"password\": \"As@123456\",\n\t\"email\": \"sa3@email.com\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5050/api/v1/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5050",
+					"path": [
+						"api",
+						"v1",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"password\": \"As@44123456\",\n\t\"email\": \"sa3@email.com\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5050/api/v1/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5050",
+					"path": [
+						"api",
+						"v1",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "password-token",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n   \"email\": \"sa2@email.com\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5050/api/v1/password-token",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5050",
+					"path": [
+						"api",
+						"v1",
+						"password-token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "reset-password",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n   \"code\": \"708346\",\n   \t\"password\": \"As@44123456\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5050/api/v1/reset-password",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5050",
+					"path": [
+						"api",
+						"v1",
+						"reset-password"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
